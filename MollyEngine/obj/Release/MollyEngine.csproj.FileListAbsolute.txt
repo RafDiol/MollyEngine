@@ -1,0 +1,9 @@
+C:\Users\rafae\Documents\GitHub\MollyEngine\MollyEngine\bin\Release\MollyEngine.exe.config
+C:\Users\rafae\Documents\GitHub\MollyEngine\MollyEngine\bin\Release\MollyEngine.exe
+C:\Users\rafae\Documents\GitHub\MollyEngine\MollyEngine\bin\Release\MollyEngine.pdb
+C:\Users\rafae\Documents\GitHub\MollyEngine\MollyEngine\obj\Release\MollyEngine.csproj.CoreCompileInputs.cache
+C:\Users\rafae\Documents\GitHub\MollyEngine\MollyEngine\obj\Release\MollyEngine.exe
+C:\Users\rafae\Documents\GitHub\MollyEngine\MollyEngine\obj\Release\MollyEngine.pdb
+C:\Users\rafae\Documents\GitHub\MollyEngine\MollyEngine\bin\Release\Images\coin.jpg
+C:\Users\rafae\Documents\GitHub\MollyEngine\MollyEngine\bin\Release\Images\img1.jpg
+C:\Users\rafae\Documents\GitHub\MollyEngine\MollyEngine\obj\Release\MollyEngine.csprojAssemblyReference.cache
