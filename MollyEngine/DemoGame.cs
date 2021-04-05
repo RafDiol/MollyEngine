@@ -44,14 +44,6 @@ namespace MollyEngine
             }
         }
 
-        public override void OnClosed()
-        {
-            foreach (Sprite2D sprite in MollyEngine.Core.MollyEngine.getAllGameObjects())
-            {
-                Console.WriteLine(sprite.Tag);
-            }
-        }
-
         public override void OnKeyDown(KeyEventArgs e)
         {
             playerController.OnKeyDownHandler(e);
