@@ -33,25 +33,9 @@
             }
         }
 
-        public bool isEqual(Vector2 vector)
-        {
-            if (this == vector)
-            {
-                return true;
-            } else
-            {
-                return false;
-            }
-        }
-
         public static Vector2 Add(Vector2 a, Vector2 b)
         {
             return new Vector2(a.X + b.X, a.Y + b.Y);
-        }
-
-        public Vector2 Add(Vector2 vector)
-        {
-            return new Vector2(this.X + vector.X, this.Y + vector.Y);
         }
 
         public static Vector2 Subtract(Vector2 a, Vector2 b)
@@ -59,19 +43,9 @@
             return new Vector2(a.X - b.X, a.Y - b.Y);
         }
 
-        public Vector2 Subtract(Vector2 vector)
-        {
-            return new Vector2(this.X - vector.X, this.Y - vector.Y);
-        }
-
         public static Vector2 Multiply(Vector2 a, Vector2 b)
         {
             return new Vector2(a.X * b.X, a.Y * b.Y);
-        }
-
-        public Vector2 Multiply(Vector2 vector)
-        {
-            return new Vector2(this.X * vector.X, this.Y * vector.Y);
         }
 
         public static Vector2 Divide(Vector2 a, Vector2 b)
@@ -79,14 +53,47 @@
             return new Vector2(a.X / b.X, a.Y / b.Y);
         }
 
-        public Vector2 Divide(Vector2 vector)
-        {
-            return new Vector2(this.X / vector.X, this.Y / vector.Y);
-        }
-
         public override string ToString()
         {
             return $"X: {X} Y: {Y}";
+        }
+
+        public static Vector2 operator+ (Vector2 a, Vector2 b)
+        {
+            return Vector2.Add(a, b);
+        }
+
+        public static Vector2 operator- (Vector2 a, Vector2 b)
+        {
+            return Vector2.Subtract(a, b);
+        }
+
+        public static Vector2 operator* (Vector2 a, Vector2 b)
+        {
+            return Vector2.Multiply(a, b);
+        }
+
+        public static Vector2 operator/ (Vector2 a, Vector2 b)
+        {
+            return Vector2.Divide(a, b);
+        }
+
+        public static bool operator == (Vector2 a, Vector2 b)
+        {
+            if (a.X == b.X && a.Y == b.Y)
+            {
+                return true;
+            }
+            return false;
+        }
+
+        public static bool operator != (Vector2 a, Vector2 b)
+        {
+            if (a.X != b.X || a.Y != b.Y)
+            {
+                return true;
+            }
+            return false;
         }
     }
 }

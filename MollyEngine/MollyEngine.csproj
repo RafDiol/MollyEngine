@@ -50,7 +50,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Animation\Animator.cs" />
+    <Compile Include="Extensions\Animator.cs" />
     <Compile Include="Core\Camera.cs" />
     <Compile Include="DemoGame.cs" />
     <Compile Include="Core\Collider.cs" />

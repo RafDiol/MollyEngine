@@ -66,7 +66,7 @@ namespace MollyEngine.Core
 
         public MollyEngine(Scale ScreenSize)
         {
-            createWindow(ScreenSize, "", FormWindowState.Normal);
+            createWindow(ScreenSize, "New Game", FormWindowState.Normal);
         }
 
         private void createWindow(Scale ScreenSize, string Title, FormWindowState state)
@@ -110,9 +110,9 @@ namespace MollyEngine.Core
 
         private void CloseGame(object sender, System.ComponentModel.CancelEventArgs e)
         {
-            OnClosed();
-            GameLoopThread.Abort();
             e.Cancel = false;
+            OnClosed(e);
+            GameLoopThread.Abort();
         }
 
         private void MouseDown(object sender, MouseEventArgs e)
@@ -133,6 +133,12 @@ namespace MollyEngine.Core
         private void MouseDoubleClick(object sender, MouseEventArgs e)
         {
             OnMouseDoubleClicked(e);
+        }
+
+        private void OnInternalException(Exception e)
+        {
+            OnException(e);
+            GameLoopThread.Abort();
         }
 
         //
@@ -160,10 +166,9 @@ namespace MollyEngine.Core
                 }
                 catch (Exception e)
                 {
-                    OnException(e);
+                    OnInternalException(e);
                 }
             }
-            OnClosed();
         }
 
         private void HandleQueue()
@@ -204,6 +209,9 @@ namespace MollyEngine.Core
             unregisterQueue.Add(gameObject);
         }
 
+        //
+        // Game Window Methods
+        //
         public void setTitle(string title)
         {
             this.Title = title;
@@ -214,6 +222,8 @@ namespace MollyEngine.Core
         {
             return this.Title;
         }
+
+
 
         public static List<GameObject> getAllGameObjects()
         {
@@ -312,15 +322,14 @@ namespace MollyEngine.Core
 
         }
 
-        public virtual void OnClosed()
+        public virtual void OnClosed(System.ComponentModel.CancelEventArgs e)
         {
             GameLoopThread.Abort();
         }
 
         public virtual void OnException(Exception e)
         {
-            Log.Error(e.Message);
-            GameLoopThread.Abort();
+            
         }
 
         public virtual void OnKeyDown(KeyEventArgs e)

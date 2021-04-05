@@ -12,7 +12,7 @@ namespace MollyEngine
     {
         //Shape2D shape;
         Sprite2D sprite;
-        ulong speed = 5;
+        ulong speed = 1;
         Random rnd = new Random();
         PlayerController playerController;
         Camera camera = new Camera();
