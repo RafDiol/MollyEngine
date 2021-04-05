@@ -1,7 +1,7 @@
-﻿using MollyEngine.MollyEngine.Core;
+﻿using MollyEngine.Core;
 using System;
 
-namespace MollyEngine.MollyEngine
+namespace MollyEngine.Core
 {
     public interface ICollider
     {

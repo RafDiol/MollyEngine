@@ -1,10 +1,10 @@
-﻿using MollyEngine.MollyEngine.Core;
+﻿using MollyEngine.Core;
 using System;
 using System.Drawing;
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace MollyEngine.MollyEngine
+namespace MollyEngine.Core
 {
     public class Sprite2D : GameObject , ICollider
     {

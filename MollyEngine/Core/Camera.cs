@@ -1,4 +1,4 @@
-﻿using MollyEngine.MollyEngine;
+﻿using MollyEngine;
 using System;
 using System.Collections.Generic;
 using System.Drawing;
@@ -6,6 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using MollyEngine.Core;
 
 namespace MollyEngine.Core
 {
@@ -26,7 +27,7 @@ namespace MollyEngine.Core
         public void moveTo(Vector2 newPos)
         {
             cameraPos = newPos;
-            MollyEngine.MollyEngine.translateTransform(cameraPos);
+            MollyEngine.translateTransform(cameraPos);
         }
 
         public void moveTo(float X, float Y)

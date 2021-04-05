@@ -1,4 +1,4 @@
-﻿namespace MollyEngine.MollyEngine
+﻿namespace MollyEngine.Core
 {
     public class Vector2
     {

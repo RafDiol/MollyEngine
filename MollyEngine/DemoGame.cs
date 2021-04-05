@@ -3,14 +3,12 @@ using System.Windows.Forms;
 using MollyEngine;
 using MollyEngine.Animation;
 using MollyEngine.Core;
-using MollyEngine.MollyEngine;
-using MollyEngine.MollyEngine.Core;
-using MollyEngine.MollyEngine.Extensions;
 using System.IO;
+using MollyEngine.Extensions;
 
 namespace MollyEngine
 {
-    public class DemoGame : MollyEngine.MollyEngine
+    public class DemoGame : Core.MollyEngine
     {
         //Shape2D shape;
         Sprite2D sprite;
@@ -48,7 +46,7 @@ namespace MollyEngine
 
         public override void OnClosed()
         {
-            foreach (Sprite2D sprite in MollyEngine.MollyEngine.getAllGameObjects())
+            foreach (Sprite2D sprite in MollyEngine.Core.MollyEngine.getAllGameObjects())
             {
                 Console.WriteLine(sprite.Tag);
             }

@@ -3,10 +3,10 @@ using System.Windows.Forms;
 using System.Drawing;
 using System.Threading;
 using System;
-using MollyEngine.MollyEngine.Core;
+using MollyEngine.Core;
 using System.Threading.Tasks;
 
-namespace MollyEngine.MollyEngine
+namespace MollyEngine.Core
 {
 
     class Canvas : Form 

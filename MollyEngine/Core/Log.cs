@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace MollyEngine.MollyEngine
+namespace MollyEngine.Core
 {
     public static class Log
     {

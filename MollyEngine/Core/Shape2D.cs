@@ -1,8 +1,8 @@
-﻿using MollyEngine.MollyEngine.Core;
+﻿using MollyEngine.Core;
 using System;
 using System.Drawing;
 
-namespace MollyEngine.MollyEngine
+namespace MollyEngine.Core
 {
     public class Shape2D : GameObject, ICollider
     {
