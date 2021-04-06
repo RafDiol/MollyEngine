@@ -50,6 +50,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Core\GraphicComponents\Pipelines\MollyNewPipeline.cs" />
+    <Compile Include="Core\GraphicComponents\Pipelines\Pipeline.cs" />
+    <Compile Include="Core\GraphicComponents\Pipelines\LegacyPipeline.cs" />
     <Compile Include="Extensions\Animator.cs" />
     <Compile Include="Core\Camera.cs" />
     <Compile Include="DemoGame.cs" />

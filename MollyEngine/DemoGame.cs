@@ -4,6 +4,7 @@ using MollyEngine;
 using MollyEngine.Animation;
 using MollyEngine.Core;
 using System.IO;
+using MollyEngine.Core.GraphicComponents.Pipelines;
 using MollyEngine.Extensions;
 
 namespace MollyEngine
@@ -12,7 +13,7 @@ namespace MollyEngine
     {
         //Shape2D shape;
         Sprite2D sprite;
-        ulong speed = 1;
+        ulong speed = 5;
         Random rnd = new Random();
         PlayerController playerController;
         Camera camera = new Camera();
@@ -25,6 +26,7 @@ namespace MollyEngine
 
         public override void OnLoad()
         {
+            MollyEngine.Core.MollyEngine.Pipeline = AvailablePipelines.MollyNewPipeline;
             sprite = new Sprite2D(new Vector2(100, 100), new Scale(100, 100), Path.GetFullPath(@"Images\img1.jpg") , "Player", 1);
             playerController = new PlayerController(sprite, speed);
             for (int i = 0; i < 30; i++)
