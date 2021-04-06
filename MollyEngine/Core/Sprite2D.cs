@@ -8,7 +8,7 @@ namespace MollyEngine.Core
 {
     public class Sprite2D : GameObject , ICollider
     {
-        public Bitmap Sprite = null;
+        private Bitmap Sprite = null;
         public string Directory = null;
 
         public bool isColliderDisabled { get; set; }

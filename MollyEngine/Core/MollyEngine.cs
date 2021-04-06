@@ -274,7 +274,7 @@ namespace MollyEngine.Core
                         if (gameObject.type == typeof(Sprite2D))
                         {
                             Sprite2D sprite = gameObject as Sprite2D;
-                            graphics.DrawImage(sprite.Sprite, sprite.Position.X, sprite.Position.Y, sprite.Scale.Width, sprite.Scale.Height);
+                            graphics.DrawImage(sprite.getImage(), sprite.Position.X, sprite.Position.Y, sprite.Scale.Width, sprite.Scale.Height);
                             renderedElements.Add(gameObject);
                         }
                         else
