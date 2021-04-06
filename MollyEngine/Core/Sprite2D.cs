@@ -68,6 +68,11 @@ namespace MollyEngine.Core
             Sprite = new Bitmap(tmp, (int)this.Scale.Width, (int)this.Scale.Height);
         }
 
+        public Bitmap getImage()
+        {
+            return Sprite;
+        }
+
         public bool isColliding(out GameObject collide)
         {
             if (isColliderDisabled)
